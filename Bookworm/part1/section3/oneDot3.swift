@@ -11,7 +11,14 @@ struct oneDot3: View {
     @AppStorage("notes") private var notes: String = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        return VStack {
+            NavigationStack {
+                TextEditor(text: $notes)
+                    .navigationTitle("Notes")
+                    .padding()
+            }
+        }
+        
     }
 }
 

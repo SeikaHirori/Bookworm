@@ -44,6 +44,7 @@
 		3F2BBEF12A2D013D008719FD /* oneDot4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDot4.swift; sourceTree = "<group>"; };
 		3F2BBEF42A2D03C9008719FD /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		3F2BBEF62A2D045D008719FD /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		3F2BBEF82A2D0D52008719FD /* RFER.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RFER.md; sourceTree = "<group>"; };
 		3F6A41362A2A6E580021EAA4 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6A41392A2A6E580021EAA4 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		3F6A413B2A2A6E580021EAA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2BBEEB2A2CFFDE008719FD /* TODO.md */,
+				3F2BBEF82A2D0D52008719FD /* RFER.md */,
 			);
 			path = _docs;
 			sourceTree = "<group>";

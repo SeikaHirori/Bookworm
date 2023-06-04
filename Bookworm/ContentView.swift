@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
+    
     var body: some View {
         return VStack {
-            oneDot2()
+            Text("Hello meep :333")
         }
         .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    // RFER #1
+    static var dataController: DataController = DataController()
+    
     static var previews: some View {
         ContentView()
+            .environment(\.managedObjectContext, dataController.container.viewContext)
     }
 }

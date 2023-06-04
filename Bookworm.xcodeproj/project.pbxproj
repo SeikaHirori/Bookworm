@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2BBEEE2A2D0095008719FD /* oneDot3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BBEED2A2D0095008719FD /* oneDot3.swift */; };
 		3F6A413A2A2A6E580021EAA4 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A41392A2A6E580021EAA4 /* BookwormApp.swift */; };
 		3F6A413C2A2A6E580021EAA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A413B2A2A6E580021EAA4 /* ContentView.swift */; };
 		3F6A413E2A2A6E5A0021EAA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A413D2A2A6E5A0021EAA4 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		3F2BBEEB2A2CFFDE008719FD /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		3F2BBEED2A2D0095008719FD /* oneDot3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDot3.swift; sourceTree = "<group>"; };
 		3F6A41362A2A6E580021EAA4 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6A41392A2A6E580021EAA4 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		3F6A413B2A2A6E580021EAA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 				3F2BBEEB2A2CFFDE008719FD /* TODO.md */,
 			);
 			path = _docs;
+			sourceTree = "<group>";
+		};
+		3F2BBEEC2A2D0085008719FD /* section3 */ = {
+			isa = PBXGroup;
+			children = (
+				3F2BBEED2A2D0095008719FD /* oneDot3.swift */,
+			);
+			path = section3;
 			sourceTree = "<group>";
 		};
 		3F6A412D2A2A6E580021EAA4 = {
@@ -145,6 +155,7 @@
 		3FECBF242A2BA10D001D30A8 /* part1 */ = {
 			isa = PBXGroup;
 			children = (
+				3F2BBEEC2A2D0085008719FD /* section3 */,
 				3FECBF252A2BA152001D30A8 /* section2 */,
 			);
 			path = part1;
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2BBEEE2A2D0095008719FD /* oneDot3.swift in Sources */,
 				3FECBF292A2BA195001D30A8 /* oneDot2.swift in Sources */,
 				3F6A413C2A2A6E580021EAA4 /* ContentView.swift in Sources */,
 				3F6A413A2A2A6E580021EAA4 /* BookwormApp.swift in Sources */,

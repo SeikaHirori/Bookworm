@@ -22,15 +22,25 @@ struct ContentView: View {
             }
             
             Button("Add") {
-                let firstNames: [String] = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-                let lastNames: [String] = ["Granger", "Lovegood", "Potter", "Weasley"]
-                
-                let chosenFirstName = firstNames.randomElement() ?? "meep :D"
-                let choseLastName = lastNames.randomElement() ?? "beep :'["
+                addRandomPresetNames()
             }
 
         }
         .padding()
+    }
+    
+    func addRandomPresetNames() -> Void {
+        let firstNames: [String] = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
+        let lastNames: [String] = ["Granger", "Lovegood", "Potter", "Weasley"]
+        
+        let chosenFirstName = firstNames.randomElement() ?? "meep :D"
+        let chosenLastName = lastNames.randomElement() ?? "beep :'["
+        
+        let student = Student(context: moc)
+        student.id = UUID()
+        student.name = "\(chosenFirstName) \(chosenLastName)"
+        
+        try? moc.save()
     }
 }
 

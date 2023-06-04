@@ -14,6 +14,7 @@
 		3F6A414B2A2A6E5A0021EAA4 /* BookwormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A414A2A2A6E5A0021EAA4 /* BookwormTests.swift */; };
 		3F6A41552A2A6E5A0021EAA4 /* BookwormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A41542A2A6E5A0021EAA4 /* BookwormUITests.swift */; };
 		3F6A41572A2A6E5A0021EAA4 /* BookwormUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A41562A2A6E5A0021EAA4 /* BookwormUITestsLaunchTests.swift */; };
+		3FECBF292A2BA195001D30A8 /* oneDot2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECBF282A2BA194001D30A8 /* oneDot2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3F6A41542A2A6E5A0021EAA4 /* BookwormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormUITests.swift; sourceTree = "<group>"; };
 		3F6A41562A2A6E5A0021EAA4 /* BookwormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F6A41632A2A6EA30021EAA4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3FECBF282A2BA194001D30A8 /* oneDot2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDot2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		3F6A41382A2A6E580021EAA4 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
+				3FECBF242A2BA10D001D30A8 /* part1 */,
 				3F6A41392A2A6E580021EAA4 /* BookwormApp.swift */,
 				3F6A413B2A2A6E580021EAA4 /* ContentView.swift */,
 				3F6A413D2A2A6E5A0021EAA4 /* Assets.xcassets */,
@@ -127,6 +130,22 @@
 				3F6A41562A2A6E5A0021EAA4 /* BookwormUITestsLaunchTests.swift */,
 			);
 			path = BookwormUITests;
+			sourceTree = "<group>";
+		};
+		3FECBF242A2BA10D001D30A8 /* part1 */ = {
+			isa = PBXGroup;
+			children = (
+				3FECBF252A2BA152001D30A8 /* section2 */,
+			);
+			path = part1;
+			sourceTree = "<group>";
+		};
+		3FECBF252A2BA152001D30A8 /* section2 */ = {
+			isa = PBXGroup;
+			children = (
+				3FECBF282A2BA194001D30A8 /* oneDot2.swift */,
+			);
+			path = section2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FECBF292A2BA195001D30A8 /* oneDot2.swift in Sources */,
 				3F6A413C2A2A6E580021EAA4 /* ContentView.swift in Sources */,
 				3F6A413A2A2A6E580021EAA4 /* BookwormApp.swift in Sources */,
 			);

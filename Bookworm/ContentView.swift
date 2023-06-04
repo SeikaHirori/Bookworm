@@ -9,10 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
+    @Environment(\.managedObjectContext) var moc
     
     var body: some View {
         return VStack {
-            Text("Hello meep :333")
+            if students.isEmpty {
+                Text("empty :'[")
+            } else {
+                List(students) { student in
+                    Text(student.name ?? "Unknown")
+                }
+            }
+            
+            Button("Add") {
+                let firstNames: [String] = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
+                let lastNames: [String] = ["Granger", "Lovegood", "Potter", "Weasley"]
+                
+                let chosenFirstName = firstNames.randomElement() ?? "meep :D"
+                let choseLastName = lastNames.randomElement() ?? "beep :'["
+            }
+
         }
         .padding()
     }

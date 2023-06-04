@@ -8,39 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
-    @Environment(\.managedObjectContext) var moc
     
     var body: some View {
         return VStack {
-            if students.isEmpty {
-                Text("empty :'[")
-            } else {
-                List(students) { student in
-                    Text(student.name ?? "Unknown")
-                }
-            }
-            
-            Button("Add") {
-                addRandomPresetNames()
-            }
-
+            Text("Hello world")
         }
-        .padding()
-    }
-    
-    func addRandomPresetNames() -> Void {
-        let firstNames: [String] = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-        let lastNames: [String] = ["Granger", "Lovegood", "Potter", "Weasley"]
-        
-        let chosenFirstName = firstNames.randomElement() ?? "meep :D"
-        let chosenLastName = lastNames.randomElement() ?? "beep :'["
-        
-        let student = Student(context: moc)
-        student.id = UUID()
-        student.name = "\(chosenFirstName) \(chosenLastName)"
-        
-        try? moc.save()
     }
 }
 

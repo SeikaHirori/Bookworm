@@ -12,4 +12,11 @@ Link: [https://www.hackingwithswift.com/100/swiftui/53](https://www.hackingwiths
 Link: [https://www.hackingwithswift.com/100/swiftui/54](https://www.hackingwithswift.com/100/swiftui/54)
 - [x] Creating books with Core Data
 - [x] Adding a custom star rating component
-- [ ] Building a list with @FetchRequest
+- [x] Building a list with @FetchRequest
+
+# Part 3
+Link: [https://www.hackingwithswift.com/100/swiftui/55](https://www.hackingwithswift.com/100/swiftui/55)
+- [ ] Showing book details
+- [ ] Sorting fetch requests with SortDescriptor
+- [ ] Deleting from a Core Data fetch request
+- [ ] Using an alert to pop a NavigationLink programmatically

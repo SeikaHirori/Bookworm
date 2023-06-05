@@ -31,6 +31,7 @@ struct RatingView_Previews: PreviewProvider {
     
     static var previews: some View {
         
+        // RFER #2
         RatingView(rating: .constant(4))
             .environment(\.managedObjectContext, dataController.container.viewContext)
     }

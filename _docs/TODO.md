@@ -11,5 +11,5 @@ Link: [https://www.hackingwithswift.com/100/swiftui/53](https://www.hackingwiths
 # Part 2
 Link: [https://www.hackingwithswift.com/100/swiftui/54](https://www.hackingwithswift.com/100/swiftui/54)
 - [x] Creating books with Core Data
-- [ ] Adding a custom star rating component
+- [x] Adding a custom star rating component
 - [ ] Building a list with @FetchRequest

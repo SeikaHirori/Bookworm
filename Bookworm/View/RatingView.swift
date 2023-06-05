@@ -10,6 +10,8 @@ import SwiftUI
 struct RatingView: View {
     @Binding var rating: Int
     
+    var label = ""
+    
     var maximumRating: Int = 5
     var minimumRating: Int = 1 // Personal touch
     
@@ -21,7 +23,18 @@ struct RatingView: View {
     
     var body: some View {
         return HStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            if label.isEmpty == false {
+                Text(label)
+            }
+
+            ForEach(minimumRating..<maximumRating + 1, id: \.self) { number in
+                image(for: number)
+                    .foregroundColor(number > rating ? offColor : onColor)
+                    .onTapGesture {
+                        rating = number
+                    }
+            }
+
         }
     }
     

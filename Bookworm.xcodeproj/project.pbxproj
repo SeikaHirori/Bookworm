@@ -119,6 +119,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3F2BBEFD2A2E5AB1008719FD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3F2BBEF32A2D03C9008719FD /* Bookworm.xcdatamodeld */,
+				3F2BBEF62A2D045D008719FD /* DataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		3F6A412D2A2A6E580021EAA4 = {
 			isa = PBXGroup;
 			children = (
@@ -144,14 +153,13 @@
 		3F6A41382A2A6E580021EAA4 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
+				3F2BBEFD2A2E5AB1008719FD /* CoreData */,
 				3F2BBEF92A2D4388008719FD /* View */,
-				3F2BBEF32A2D03C9008719FD /* Bookworm.xcdatamodeld */,
 				3FECBF242A2BA10D001D30A8 /* part1 */,
 				3F6A41392A2A6E580021EAA4 /* BookwormApp.swift */,
 				3F6A413B2A2A6E580021EAA4 /* ContentView.swift */,
 				3F6A413D2A2A6E5A0021EAA4 /* Assets.xcassets */,
 				3F6A413F2A2A6E5A0021EAA4 /* Preview Content */,
-				3F2BBEF62A2D045D008719FD /* DataController.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";

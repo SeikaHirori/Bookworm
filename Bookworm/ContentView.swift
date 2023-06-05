@@ -8,10 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
+    
+    // Sheet management
+    @State private var isAddingBookOn: Bool = false
     
     var body: some View {
-        return VStack {
-            Text("Hello world")
+        return NavigationStack {
+            VStack {
+                Text("Count: \(books.count)")
+                    .navigationTitle("Bookworm")
+            }
+            .padding()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isAddingBookOn.toggle()
+                        print("Pressed sheet 'AddBookView'")
+                    } label: {
+                        Label("Add Book", systemImage: "plus")
+                    }
+                    .sheet(isPresented: $isAddingBookOn) {
+                        AddBookView()
+                    }
+                }
+            }
         }
     }
 }

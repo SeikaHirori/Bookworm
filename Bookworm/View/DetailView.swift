@@ -17,17 +17,20 @@ struct DetailView: View {
 }
 
 struct DetailView_Previews: PreviewProvider {
-    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+
+    // RFER #3
+    static var dataController = DataController()
+    static var moc = dataController.container.viewContext
     
     static var previews: some View {
-        let book: Book = Book(context: moc)
-        book.title = "Test book :O"
-        book.author = "Test author :D"
+        let book = Book(context: moc)
+        book.title = "Test book"
+        book.author = "Test author"
         book.genre = "Fantasy"
         book.rating = 4
-        book.review = "This was a great book; I really loved it."
-        
-        return NavigationStack  {
+        book.review = "This was a great book; I really enjoyed it."
+
+        return NavigationView {
             DetailView(book: book)
         }
     }

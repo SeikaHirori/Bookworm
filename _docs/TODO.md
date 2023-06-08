@@ -17,6 +17,7 @@ Link: [https://www.hackingwithswift.com/100/swiftui/54](https://www.hackingwiths
 # Part 3
 Link: [https://www.hackingwithswift.com/100/swiftui/55](https://www.hackingwithswift.com/100/swiftui/55)
 - [ ] Showing book details
+    - WIP
 - [ ] Sorting fetch requests with SortDescriptor
 - [ ] Deleting from a Core Data fetch request
 - [ ] Using an alert to pop a NavigationLink programmatically

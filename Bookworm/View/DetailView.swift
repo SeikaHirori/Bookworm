@@ -27,6 +27,16 @@ struct DetailView: View {
                     .clipShape(Capsule())
                     .offset(x: -5, y: -5)
             }
+            
+            Text(book.author ?? "Unknown author")
+                .font(.title)
+                .foregroundColor(.secondary)
+            
+            Text(book.review ?? "No review")
+                .padding()
+            
+            RatingView(rating: .constant(Int(book.rating)))
+                .font(.largeTitle)
         }
         .navigationTitle(book.title ?? "Unknown Book")
         .navigationBarTitleDisplayMode(.inline)

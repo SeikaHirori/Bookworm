@@ -43,6 +43,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .onDelete(perform: deleteBooks)
                 }
                 .navigationTitle("Bookworm")
 
@@ -61,9 +62,27 @@ struct ContentView: View {
                         AddBookView()
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
             }
         }
     }
+    
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this book in our fetch request
+            let book = books[offset]
+            
+            // delete it from the context
+            moc.delete(book)
+        }
+        
+        // save the context
+        try? moc.save()
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

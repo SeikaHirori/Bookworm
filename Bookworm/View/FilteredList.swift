@@ -22,7 +22,7 @@ struct FilteredList: View {
     @State private var searchTerm: String = ""
     
     // EditMode
-    @State var mode:EditMode = .inactive
+    @State private var editMode:EditMode = EditMode.inactive // RFER #6
     
     init(filter: String) {
         if !filter.isEmpty {
@@ -57,6 +57,7 @@ struct FilteredList: View {
                     }
                     .onDelete{ indexSet in
                         deleteBooks(at: indexSet)
+                        resetEditMode()
                     }
                 }
                 .navigationTitle("Bookworm")
@@ -75,10 +76,11 @@ struct FilteredList: View {
                     
                     ToolbarItem(placement: .navigationBarLeading) {
                         EditButton()
+                            .disabled(books.isEmpty)
                             
                     }
                 }
-                .environment(\.editMode, $mode)
+                .environment(\.editMode, $editMode) // RFER #6
 
                 
             }
@@ -101,10 +103,15 @@ struct FilteredList: View {
 
         // save the context
         try? moc.save()
-        
-        
     }
     
+    // RFER #6
+    func resetEditMode() -> Void {
+        if books.isEmpty {
+            editMode = EditMode.inactive
+            print("Switching to EditMode.inactive")
+        }
+    }
 
 }
 

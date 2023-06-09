@@ -15,3 +15,6 @@
 - RFER #5 | Trying to use CoreData's list and dynamically filtering it
     - (Link)[https://www.hackingwithswift.com/books/ios-swiftui/dynamically-filtering-fetchrequest-with-swiftui]
     - Alternative implemplentations: [Link]( https://stackoverflow.com/questions/68530633/how-to-use-a-fetchrequest-with-the-new-searchable-modifier-in-swiftui)
+
+- RFER #6 | Resetting EditMode when list becomes empty after deleting last value
+    - [Link](https://stackoverflow.com/a/67256264)

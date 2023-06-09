@@ -15,6 +15,15 @@ struct FilteredList: View {
     // Searchable Stuff
     let criteria:String = "title BEGINSWITH %@"
     
+    // Sheet management
+    @State private var isAddingBookOn: Bool = false
+
+    // Search Terms
+    @State private var searchTerm: String = ""
+    
+    // EditMode
+    @State var mode:EditMode = .inactive
+    
     init(filter: String) {
         if !filter.isEmpty {
             _books = FetchRequest<Book>(sortDescriptors: [],
@@ -46,11 +55,38 @@ struct FilteredList: View {
                             }
                         }
                     }
-                    .onDelete(perform: deleteBooks)
+                    .onDelete{ indexSet in
+                        deleteBooks(at: indexSet)
+                    }
                 }
                 .navigationTitle("Bookworm")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            isAddingBookOn.toggle()
+                            print("Pressed sheet 'AddBookView'")
+                        } label: {
+                            Label("Add Book", systemImage: "plus")
+                        }
+                        .sheet(isPresented: $isAddingBookOn) {
+                            AddBookView()
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                            
+                    }
+                }
+                .environment(\.editMode, $mode)
+
+                
             }
+            
+            .searchable(text: $searchTerm, placement: .automatic, prompt: "Search book title")
+            
         }
+
     }
     
     
@@ -65,7 +101,11 @@ struct FilteredList: View {
 
         // save the context
         try? moc.save()
+        
+        
     }
+    
+
 }
 
 struct FilteredList_Previews: PreviewProvider {

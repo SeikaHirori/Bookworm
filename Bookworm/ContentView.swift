@@ -24,33 +24,29 @@ struct ContentView: View {
     var body: some View {
         return NavigationStack {
             VStack {
-                if books.isEmpty { Text("empty book list :'[")
+                if books.isEmpty {
+                    VStack {
+                        Text("empty book list :'[")
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button {
+                                isAddingBookOn.toggle()
+                                print("Pressed sheet 'AddBookView'")
+                            } label: {
+                                Label("Add Book", systemImage: "plus")
+                            }
+                            .sheet(isPresented: $isAddingBookOn) {
+                                AddBookView()
+                            }
+                        }
+                    }
                 } else {
                     FilteredList(filter: searchTerm)
                 }
             }
             .navigationTitle("Bookworm")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        isAddingBookOn.toggle()
-                        print("Pressed sheet 'AddBookView'")
-                    } label: {
-                        Label("Add Book", systemImage: "plus")
-                    }
-                    .sheet(isPresented: $isAddingBookOn) {
-                        AddBookView()
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                        .disabled(books.isEmpty)
-                }
-            }
         }
-        .searchable(text: $searchTerm, placement: .automatic, prompt: "Search book title")
-
     }
     
     func deleteBooks(at offsets: IndexSet) {

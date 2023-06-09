@@ -74,6 +74,7 @@ struct AddBookView: View {
 //        .onAppear(perform: resetFields)
         
         
+        
     }
     
     func saveNewBook() -> Void {

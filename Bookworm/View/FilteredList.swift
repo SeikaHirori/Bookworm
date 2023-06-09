@@ -16,8 +16,12 @@ struct FilteredList: View {
     let criteria:String = "title BEGINSWITH %@"
     
     init(filter: String) {
-        _books = FetchRequest<Book>(sortDescriptors: [],
-                                    predicate: NSPredicate(format: criteria, filter))
+        if !filter.isEmpty {
+            _books = FetchRequest<Book>(sortDescriptors: [],
+                                        predicate: NSPredicate(format: criteria, filter))
+        } else {
+            _books = FetchRequest<Book>(sortDescriptors: [])
+        }
     }
     
     var body: some View {

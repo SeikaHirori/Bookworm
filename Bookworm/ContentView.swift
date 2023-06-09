@@ -24,12 +24,7 @@ struct ContentView: View {
     var body: some View {
         return NavigationStack {
             VStack {
-                Text("Count: \(books.count)")
-                    .navigationTitle("Bookworm")
-                
-                FilteredList()
-                
-
+                FilteredList(filter: searchTerm)
             }
             .navigationTitle("Bookworm")
             .padding()
@@ -51,6 +46,8 @@ struct ContentView: View {
                 }
             }
         }
+        .searchable(text: $searchTerm, placement: .automatic, prompt: "Search book title")
+
     }
     
     func deleteBooks(at offsets: IndexSet) {

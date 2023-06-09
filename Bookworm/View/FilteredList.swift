@@ -6,62 +6,73 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct FilteredList: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
-    @State var searchTerm: String = ""
-
+    
+    // Searchable Stuff
+    let criteria:String = "title BEGINSWITH %@"
+    
+    init(filter: String) {
+        _books = FetchRequest<Book>(sortDescriptors: [],
+                                    predicate: NSPredicate(format: criteria, filter))
+    }
     
     var body: some View {
         return NavigationStack {
-            List {
-                ForEach(books) { book in
-                    NavigationLink {
-                        DetailView(book: book)
-                    } label: {
-                        HStack {
-                            EmojiRatingView(rating: book.rating)
-                                .font(.largeTitle)
-                            
-                            VStack(alignment: .leading) {
-                                Text(book.title ?? "Unknown Title")
-                                    .font(.headline)
+            VStack {
+                List {
+                    ForEach(books) { book in
+                        NavigationLink {
+                            DetailView(book: book)
+                        } label: {
+                            HStack {
+                                EmojiRatingView(rating: book.rating)
+                                    .font(.largeTitle)
                                 
-                                Text(book.author ?? "Unknown Author")
-                                    .foregroundColor(.secondary)
+                                VStack(alignment: .leading) {
+                                    Text(book.title ?? "Unknown Title")
+                                        .font(.headline)
+                                    
+                                    Text(book.author ?? "Unknown Author")
+                                        .foregroundColor(.secondary)
+                                }
                             }
                         }
                     }
+//                    .onDelete(perform: deleteBooks)
                 }
-                .onDelete(perform: deleteBooks)
+                .navigationTitle("Bookworm")
             }
-            .navigationTitle("Bookworm")
-            .searchable(text: $searchTerm, placement: .automatic, prompt: "Search book title")
         }
     }
     
     
     
-    func deleteBooks(at offsets: IndexSet) {
-        for offset in offsets {
-            // find this book in our fetch request
-            let book = books[offset]
-            
-            // delete it from the context
-            moc.delete(book)
-        }
-        
-        // save the context
-        try? moc.save()
-    }
+//    func deleteBooks(at offsets: IndexSet) {
+//        for offset in offsets {
+//            // find this book in our fetch request
+//            let book = books[offset]
+//
+//            // delete it from the context
+//            moc.delete(book)
+//        }
+//
+//        // save the context
+//        try? moc.save()
+//    }
 }
 
 struct FilteredList_Previews: PreviewProvider {
     static var dataController: DataController = DataController()
 
+
     static var previews: some View {
-        FilteredList()
+        var searchWord:String = ""
+        
+        FilteredList(filter: searchWord)
             .environment(\.managedObjectContext, dataController.container.viewContext)
 
     }

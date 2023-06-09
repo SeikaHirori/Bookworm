@@ -86,6 +86,7 @@ struct AddBookView: View {
         newBook.rating = Int16(rating)
         newBook.genre = genre
         newBook.review = review
+        newBook.date = Date.now
         
         try? moc.save()
     }
@@ -105,7 +106,6 @@ struct AddBookView: View {
         genre = genres[0]
         review = ""
     }
-    
 }
 
 struct AddBookView_Previews: PreviewProvider {

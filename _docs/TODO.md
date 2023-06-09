@@ -30,7 +30,7 @@ Link: [https://www.hackingwithswift.com/100/swiftui/55](https://www.hackingwiths
 - [x] Modify ContentView so that books rated as 1 star are highlighted somehow, such as having their name shown in red.
     - COMPLETED at commit:
         - bbc132d4aaa8845f486230e8d6e86d84237dc78e
-- [ ] Add a new “date” attribute to the Book entity, assigning Date.now to it so it gets the current date and time, then format that nicely somewhere in DetailView.
+- [x] Add a new “date” attribute to the Book entity, assigning Date.now to it so it gets the current date and time, then format that nicely somewhere in DetailView.
 
 # Personal Challenge
 - [x] Add Searchable bar to ContentView

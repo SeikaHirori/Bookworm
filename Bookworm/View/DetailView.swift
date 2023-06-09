@@ -41,6 +41,9 @@ struct DetailView: View {
             
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
+            
+            Text("Date: \(book.date?.formatted(.dateTime.month().day().year()) ?? "N/A")")
+                .padding()
         }
         .navigationTitle(book.title ?? "Unknown Book")
         .navigationBarTitleDisplayMode(.inline)
@@ -87,6 +90,7 @@ struct DetailView_Previews: PreviewProvider {
         fillBook.genre = "Fantasy"
         fillBook.rating = 4
         fillBook.review = "This was a great book; I really enjoyed it."
+        fillBook.date = Date.now
         
         let emptyBook = Book(context: moc)
         emptyBook.title = ""
@@ -97,7 +101,11 @@ struct DetailView_Previews: PreviewProvider {
         
 
         return NavigationView {
-            DetailView(book: emptyBook)
+//            // Empty Test
+//            DetailView(book: emptyBook)
+            
+            // Filled out Test
+            DetailView(book: fillBook)
         }
     }
 }

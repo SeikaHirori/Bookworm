@@ -9,5 +9,9 @@
 - RFER #3 | 
 [Link](https://www.hackingwithswift.com/forums/100-days-of-swiftui/day-56-bookworm-preview-crashes-when-using-moc/19940#:~:text=struct%20DetailView_Previews%3A,%7D%0A%20%20%20%20%7D%0A%7D)
 
-- RFER #4
+- RFER #4 | Using SwiftUI's 'searchable
 [LINK](https://www.youtube.com/watch?v=iTqwa0DCIMA)
+
+- RFER #5 | Trying to use CoreData's list and dynamically filtering it
+    - (Link)[https://www.hackingwithswift.com/books/ios-swiftui/dynamically-filtering-fetchrequest-with-swiftui]
+    - Alternative implemplentations: [Link]( https://stackoverflow.com/questions/68530633/how-to-use-a-fetchrequest-with-the-new-searchable-modifier-in-swiftui)

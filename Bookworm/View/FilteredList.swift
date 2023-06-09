@@ -41,17 +41,22 @@ struct FilteredList: View {
                         NavigationLink {
                             DetailView(book: book)
                         } label: {
-                            HStack {
-                                EmojiRatingView(rating: book.rating)
-                                    .font(.largeTitle)
-                                
-                                VStack(alignment: .leading) {
-                                    Text(book.title ?? "Unknown Title")
-                                        .font(.headline)
+                            ZStack(alignment: .leading) {
+
+                                HStack {
+                                    EmojiRatingView(rating: book.rating)
+                                        .font(.largeTitle)
                                     
-                                    Text(book.author ?? "Unknown Author")
-                                        .foregroundColor(.secondary)
+                                    VStack(alignment: .leading) {
+                                        Text(book.title ?? "Unknown Title")
+                                            .font(.headline)
+                                            .foregroundColor(book.rating == 1 ? Color.red : Color.accentColor)
+                                        
+                                        Text(book.author ?? "Unknown Author")
+                                            .foregroundColor(.secondary)
+                                    }
                                 }
+                                
                             }
                         }
                     }

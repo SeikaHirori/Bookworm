@@ -26,9 +26,10 @@ Link: [https://www.hackingwithswift.com/100/swiftui/55](https://www.hackingwiths
 - [x] Right now it’s possible to select no title, author, or genre for books, which causes a problem for the detail view. Please fix this, either by forcing defaults, validating the form, or showing a default picture for unknown genres – you can choose.
     - COMPLETED EARLY ON at commit "4b5cc63"  
         - METHOD: Do not allow submission of adding a new book if fields "title" and "author" are empty
-    
         - Modified to use "Fantasy" as default genre picture
-- [ ] Modify ContentView so that books rated as 1 star are highlighted somehow, such as having their name shown in red.
+- [x] Modify ContentView so that books rated as 1 star are highlighted somehow, such as having their name shown in red.
+    - COMPLETED at commit:
+        - 
 - [ ] Add a new “date” attribute to the Book entity, assigning Date.now to it so it gets the current date and time, then format that nicely somewhere in DetailView.
 
 # Personal Challenge

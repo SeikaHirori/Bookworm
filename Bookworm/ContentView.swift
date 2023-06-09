@@ -24,10 +24,12 @@ struct ContentView: View {
     var body: some View {
         return NavigationStack {
             VStack {
-                FilteredList(filter: searchTerm)
+                if books.isEmpty { Text("empty book list :'[")
+                } else {
+                    FilteredList(filter: searchTerm)
+                }
             }
             .navigationTitle("Bookworm")
-            .padding()
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -43,6 +45,7 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
+                        .disabled(books.isEmpty)
                 }
             }
         }

@@ -81,15 +81,23 @@ struct DetailView_Previews: PreviewProvider {
     static var moc = dataController.container.viewContext
     
     static var previews: some View {
-        let book = Book(context: moc)
-        book.title = "Test book"
-        book.author = "Test author"
-        book.genre = "Fantasy"
-        book.rating = 4
-        book.review = "This was a great book; I really enjoyed it."
+        let fillBook = Book(context: moc)
+        fillBook.title = "Test book"
+        fillBook.author = "Test author"
+        fillBook.genre = "Fantasy"
+        fillBook.rating = 4
+        fillBook.review = "This was a great book; I really enjoyed it."
+        
+        let emptyBook = Book(context: moc)
+        emptyBook.title = ""
+        emptyBook.author = ""
+        emptyBook.genre = ""
+        emptyBook.rating = 3
+        emptyBook.review = ""
+        
 
         return NavigationView {
-            DetailView(book: book)
+            DetailView(book: emptyBook)
         }
     }
 }

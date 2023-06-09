@@ -18,7 +18,8 @@ struct AddBookView: View {
     @State private var title: String = ""
     @State private var author: String = ""
     @State private var rating: Int = 3
-    @State private var genre: String = ""
+    @State private var genre: String = "Fantasy"
+//    @State private var genre: String = ""
     @State private var review: String = ""
     
     // Choices
@@ -59,7 +60,7 @@ struct AddBookView: View {
                         Button("Save") {
                             // add the book
                             saveNewBook()
-                            clearFields()
+                            resetFields()
                             dismiss()
                         }
                     }
@@ -67,7 +68,10 @@ struct AddBookView: View {
                 }
                 .navigationTitle("Add Book")
             }
+            
+            
         }
+//        .onAppear(perform: resetFields)
         
         
     }
@@ -85,11 +89,19 @@ struct AddBookView: View {
         try? moc.save()
     }
 
-    func clearFields() -> Void {
+//    func clearFields() -> Void {
+//        title = ""
+//        author = ""
+//        rating = 3
+//        genre = ""
+//        review = ""
+//    }
+    
+    func resetFields() -> Void {
         title = ""
         author = ""
         rating = 3
-        genre = ""
+        genre = genres[0]
         review = ""
     }
     

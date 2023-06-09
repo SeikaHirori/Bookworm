@@ -23,6 +23,16 @@ Link: [https://www.hackingwithswift.com/100/swiftui/55](https://www.hackingwiths
 
 # Part 4 | Challenges
 [Link](https://www.hackingwithswift.com/books/ios-swiftui/bookworm-wrap-up)
-- [ ] Right now it’s possible to select no title, author, or genre for books, which causes a problem for the detail view. Please fix this, either by forcing defaults, validating the form, or showing a default picture for unknown genres – you can choose.
+- [x] Right now it’s possible to select no title, author, or genre for books, which causes a problem for the detail view. Please fix this, either by forcing defaults, validating the form, or showing a default picture for unknown genres – you can choose.
+    - COMPLETED EARLY ON at commit "4b5cc63"  
+        - METHOD: Do not allow submission of adding a new book if fields "title" and "author" are empty
+    
+        - Modified to use "Fantasy" as default genre picture
 - [ ] Modify ContentView so that books rated as 1 star are highlighted somehow, such as having their name shown in red.
 - [ ] Add a new “date” attribute to the Book entity, assigning Date.now to it so it gets the current date and time, then format that nicely somewhere in DetailView.
+
+# Personal Challenge
+- [x] Add Searchable bar to ContentView
+    - COMPLETED on commits: 
+        - d439e5a26ae979b54c207a9446c0d88a352384da
+        - e15c97dcebbb4f7d040ab8943090cf2e7a276eb8

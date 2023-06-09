@@ -46,7 +46,7 @@ struct FilteredList: View {
                             }
                         }
                     }
-//                    .onDelete(perform: deleteBooks)
+                    .onDelete(perform: deleteBooks)
                 }
                 .navigationTitle("Bookworm")
             }
@@ -54,19 +54,18 @@ struct FilteredList: View {
     }
     
     
-    
-//    func deleteBooks(at offsets: IndexSet) {
-//        for offset in offsets {
-//            // find this book in our fetch request
-//            let book = books[offset]
-//
-//            // delete it from the context
-//            moc.delete(book)
-//        }
-//
-//        // save the context
-//        try? moc.save()
-//    }
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this book in our fetch request
+            let book = books[offset]
+
+            // delete it from the context
+            moc.delete(book)
+        }
+
+        // save the context
+        try? moc.save()
+    }
 }
 
 struct FilteredList_Previews: PreviewProvider {

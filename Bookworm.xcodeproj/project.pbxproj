@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0CF2262A32B378002EFB1A /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CF2252A32B378002EFB1A /* FilteredList.swift */; };
 		3F2BBEEE2A2D0095008719FD /* oneDot3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BBEED2A2D0095008719FD /* oneDot3.swift */; };
 		3F2BBEF22A2D013D008719FD /* oneDot4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BBEF12A2D013D008719FD /* oneDot4.swift */; };
 		3F2BBEF52A2D03C9008719FD /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BBEF32A2D03C9008719FD /* Bookworm.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0CF2252A32B378002EFB1A /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		3F2BBEEB2A2CFFDE008719FD /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		3F2BBEED2A2D0095008719FD /* oneDot3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDot3.swift; sourceTree = "<group>"; };
 		3F2BBEF12A2D013D008719FD /* oneDot4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDot4.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				3F2BBEFE2A2E5B14008719FD /* RatingView.swift */,
 				3F2BBF002A2E9EE3008719FD /* EmojiRatingView.swift */,
 				3F59A36C2A326074002023FD /* DetailView.swift */,
+				3F0CF2252A32B378002EFB1A /* FilteredList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				3F59A36D2A326074002023FD /* DetailView.swift in Sources */,
 				3F2BBEFC2A2D43BF008719FD /* AddBookView.swift in Sources */,
 				3F2BBEEE2A2D0095008719FD /* oneDot3.swift in Sources */,
+				3F0CF2262A32B378002EFB1A /* FilteredList.swift in Sources */,
 				3FECBF292A2BA195001D30A8 /* oneDot2.swift in Sources */,
 				3F6A413C2A2A6E580021EAA4 /* ContentView.swift in Sources */,
 				3F6A413A2A2A6E580021EAA4 /* BookwormApp.swift in Sources */,

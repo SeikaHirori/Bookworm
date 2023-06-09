@@ -9,3 +9,5 @@
 - RFER #3 | 
 [Link](https://www.hackingwithswift.com/forums/100-days-of-swiftui/day-56-bookworm-preview-crashes-when-using-moc/19940#:~:text=struct%20DetailView_Previews%3A,%7D%0A%20%20%20%20%7D%0A%7D)
 
+- RFER #4
+[LINK](https://www.youtube.com/watch?v=iTqwa0DCIMA)

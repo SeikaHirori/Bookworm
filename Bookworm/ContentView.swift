@@ -17,38 +17,21 @@ struct ContentView: View {
     // Sheet management
     @State private var isAddingBookOn: Bool = false
     
+    // Searchable
+    // RFER #4
+    @State private var searchTerm:String = ""
+    
     var body: some View {
         return NavigationStack {
             VStack {
-//                Text("Count: \(books.count)")
-//                    .navigationTitle("Bookworm")
+                Text("Count: \(books.count)")
+                    .navigationTitle("Bookworm")
                 
-                List {
-                    ForEach(books) { book in
-                        NavigationLink {
-//                            Text(book.title ?? "Unknown Title")
-                            DetailView(book: book)
-                        } label: {
-                            HStack {
-                                EmojiRatingView(rating: book.rating)
-                                    .font(.largeTitle)
-                                
-                                VStack(alignment: .leading) {
-                                    Text(book.title ?? "Unknown Title")
-                                        .font(.headline)
-                                    
-                                    Text(book.author ?? "Unknown Author")
-                                        .foregroundColor(.secondary)
-                                }
-                            }
-                        }
-                    }
-                    .onDelete(perform: deleteBooks)
-                }
-                .navigationTitle("Bookworm")
+                FilteredList()
+                
 
-                
             }
+            .navigationTitle("Bookworm")
             .padding()
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -74,11 +57,11 @@ struct ContentView: View {
         for offset in offsets {
             // find this book in our fetch request
             let book = books[offset]
-            
+
             // delete it from the context
             moc.delete(book)
         }
-        
+
         // save the context
         try? moc.save()
     }
